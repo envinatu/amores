@@ -1,11 +1,32 @@
+# **Currículum Vitae - Marcelo Amores**  
 
-# Marcelo Amores
+📌 Proyecto desarrollado con [Quarto](https://quarto.org/) para la creación y publicación de mi currículum vitae en formato web y PDF.  
+
+## 📁 **Estructura del Proyecto**  
+- 📂 `_book/` → Carpeta de salida con los archivos generados (no se versiona en GitHub).  
+- 📄 `index.qmd` → Archivo principal del CV en formato Quarto.  
+- 📄 `_quarto.yml` → Configuración del proyecto (metadatos, formato de salida, etc.).  
+- 📄 `README.md` → Este archivo con información sobre el proyecto.  
+
+## ⚙️ **Requisitos y Configuración**  
+Para visualizar o compilar el CV, se requiere:  
+- [Quarto](https://quarto.org/docs/get-started/) instalado.  
+- R y RStudio (opcional si se usa con R).  
+- Paquetes adicionales si se personaliza con RMarkdown o LaTeX.  
+
+## 🛠 **Generación y Publicación**  
+### **Compilar el CV**  
+Para generar el currículum en los formatos deseados, ejecutar en la terminal:  
+```sh
+quarto render
+```
+
+## 📜 **Licencia**  
+© 
+```{r}
+year <- format(Sys.Date(), "%Y")
+```
+Marcelo Amores. Todos los derechos reservados.  
 
 
-Marcelo Amores es un profesional con una sólida trayectoria en los ámbitos ambiental, académico y científico. Es Magíster en Educación con mención en Pedagogía por la Universidad Tecnológica Empresarial de Guayaquil, donde se graduó con honores como el Mejor Graduado de la Facultad de Posgrado e Investigación, promoción 2024, con un promedio de 9.7. Además, es Ingeniero en Medio Ambiente por la Universidad Técnica de Cotopaxi, donde también obtuvo la más alta calificación de su promoción en 2019, con un promedio de 9.5.
 
-A lo largo de su carrera, ha participado en diversos proyectos de investigación sobre recursos hídricos, liderando estudios relacionados con la calidad fisicoquímica y microbiológica del agua. Ha desempeñado un rol clave en la organización de eventos de ciencia ciudadana, promoviendo la participación comunitaria en la conservación del medio ambiente. Desde 2022, es curador en la plataforma iNaturalist, donde gestiona problemas taxonómicos, modera la plataforma y desarrolla proyectos enfocados en biodiversidad y calidad ambiental.
-
-Desde 2023, ejerce como Asesor Académico en Servicios Integrales de Tesis S.A., brindando acompañamiento y capacitación en el desarrollo de proyectos de investigación a nivel de pregrado y posgrado. Su experiencia también incluye roles previos como Técnico Ambiental y Supervisor de levantamiento de información estadística.
-
-Marcelo complementa su labor con el registro y conservación de la biodiversidad Andina, combinando metodologías científicas con el uso de software R, Quarto, Markdown y LaTeX para el procesamiento y visualización de datos ambientales. Su enfoque interdisciplinario y su compromiso con la sostenibilidad lo han consolidado como un referente en su campo.
