@@ -14,7 +14,8 @@ Para visualizar o compilar el CV, se requiere:
 - R y RStudio (opcional si se usa con R).  
 - Paquetes adicionales si se personaliza con RMarkdown o LaTeX.  
 
-## 🛠 **Generación y Publicación**  
+## 🛠 **Generación y Publicación** 
+
 ### **Compilar el CV**  
 Para generar el currículum en los formatos deseados, ejecutar en la terminal:  
 ```sh
@@ -22,11 +23,8 @@ quarto render
 ```
 
 ## 📜 **Licencia**  
-© 
-```{r}
-year <- format(Sys.Date(), "%Y")
-```
-Marcelo Amores. Todos los derechos reservados.  
+
+© Marcelo Amores. Todos los derechos reservados.  
 
 
 
