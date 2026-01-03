@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.8.26">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Marcelo Amores">
 <meta name="description" content="Sitio web profesional de Marcelo Amores Palma">
@@ -19,7 +19,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -29,17 +49,21 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/amores1.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-b4f3a9b4c0e6a6c61a7f147957faed95.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-0b97143bddb5d241aedf42ed1149ee61.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b4f3a9b4c0e6a6c61a7f147957faed95.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -53,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -68,7 +92,169 @@ ul.task-list li input[type="checkbox"] {
 }</script><!-- Verificación de Google --><meta name="google-site-verification" content="EYveEP5I9oi6m-r8Qa_Fett47y3RJFqSizYYvf7G1RM">
 <!-- Canonical URL dinámico --><link rel="canonical" href="{{ page.url | absolute_url }}">
 </head>
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
@@ -136,15 +322,16 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="#perfil-profesional" id="toc-perfil-profesional" class="nav-link" data-scroll-target="#perfil-profesional"><span class="header-section-number">1.1</span> Perfil Profesional</a></li>
   </ul>
 </li>
-  <li><a href="#portafolio" id="toc-portafolio" class="nav-link" data-scroll-target="#portafolio"><span class="header-section-number">2</span> Portafolio</a></li>
-  <li><a href="#habilidades" id="toc-habilidades" class="nav-link" data-scroll-target="#habilidades"><span class="header-section-number">3</span> Habilidades</a></li>
-  <li><a href="#instrucci%C3%B3n-formal" id="toc-instrucción-formal" class="nav-link" data-scroll-target="#instrucci%C3%B3n-formal"><span class="header-section-number">4</span> Instrucción Formal</a></li>
-  <li><a href="#experiencia-profesional" id="toc-experiencia-profesional" class="nav-link" data-scroll-target="#experiencia-profesional"><span class="header-section-number">5</span> Experiencia profesional</a></li>
-  <li><a href="#premios-y-reconocimientos" id="toc-premios-y-reconocimientos" class="nav-link" data-scroll-target="#premios-y-reconocimientos"><span class="header-section-number">6</span> Premios y Reconocimientos</a></li>
-  <li><a href="#ponencias" id="toc-ponencias" class="nav-link" data-scroll-target="#ponencias"><span class="header-section-number">7</span> Ponencias</a></li>
-  <li><a href="#diplomados" id="toc-diplomados" class="nav-link" data-scroll-target="#diplomados"><span class="header-section-number">8</span> Diplomados</a></li>
-  <li><a href="#cursos" id="toc-cursos" class="nav-link" data-scroll-target="#cursos"><span class="header-section-number">9</span> Cursos</a></li>
-  <li><a href="#respaldos" id="toc-respaldos" class="nav-link" data-scroll-target="#respaldos"><span class="header-section-number">10</span> Respaldos</a></li>
+  <li><a href="#instrucci%C3%B3n-formal" id="toc-instrucción-formal" class="nav-link" data-scroll-target="#instrucci%C3%B3n-formal"><span class="header-section-number">2</span> Instrucción Formal</a></li>
+  <li><a href="#experiencia-profesional" id="toc-experiencia-profesional" class="nav-link" data-scroll-target="#experiencia-profesional"><span class="header-section-number">3</span> Experiencia profesional</a></li>
+  <li><a href="#publicaciones" id="toc-publicaciones" class="nav-link" data-scroll-target="#publicaciones"><span class="header-section-number">4</span> Publicaciones</a></li>
+  <li><a href="#portafolio" id="toc-portafolio" class="nav-link" data-scroll-target="#portafolio"><span class="header-section-number">5</span> Portafolio</a></li>
+  <li><a href="#habilidades" id="toc-habilidades" class="nav-link" data-scroll-target="#habilidades"><span class="header-section-number">6</span> Habilidades</a></li>
+  <li><a href="#premios-y-reconocimientos" id="toc-premios-y-reconocimientos" class="nav-link" data-scroll-target="#premios-y-reconocimientos"><span class="header-section-number">7</span> Premios y Reconocimientos</a></li>
+  <li><a href="#ponencias" id="toc-ponencias" class="nav-link" data-scroll-target="#ponencias"><span class="header-section-number">8</span> Ponencias</a></li>
+  <li><a href="#diplomados" id="toc-diplomados" class="nav-link" data-scroll-target="#diplomados"><span class="header-section-number">9</span> Diplomados</a></li>
+  <li><a href="#cursos" id="toc-cursos" class="nav-link" data-scroll-target="#cursos"><span class="header-section-number">10</span> Cursos</a></li>
+  <li><a href="#respaldos" id="toc-respaldos" class="nav-link" data-scroll-target="#respaldos"><span class="header-section-number">11</span> Respaldos</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -171,95 +358,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 <section id="marcelo-f.-amores-palma" class="level1" data-number="1"><h1 data-number="1">
-<span class="header-section-number">1</span> Marcelo F. Amores Palma</h1><p><img src="images/amores1.jpg" title="Marcelo F. Amores Palma" class="quarto-cover-image img-fluid"></p>
+<span class="header-section-number">1</span> Marcelo F. Amores Palma</h1><p><img src="images/amores1.jpg" title="Marcelo F. Amores Palma" class="quarto-cover-image nolightbox img-fluid"></p>
 <section id="perfil-profesional" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="perfil-profesional">
 <span class="header-section-number">1.1</span> Perfil Profesional</h2>
 <p>Marcelo Amores es un profesional con una sólida trayectoria en los ámbitos ambiental, académico y científico. Es Magíster en Educación con mención en Pedagogía por la Universidad Tecnológica Empresarial de Guayaquil, donde se graduó con honores como el Mejor Graduado de la Facultad de Posgrado e Investigación, promoción 2024, con un promedio de 9.7. Además, es Ingeniero en Medio Ambiente por la Universidad Técnica de Cotopaxi, donde también obtuvo la más alta calificación de su promoción en 2019, con un promedio de 9.5.</p>
 <p>A lo largo de su carrera, ha participado en diversos proyectos de investigación sobre recursos hídricos, liderando estudios relacionados con la calidad fisicoquímica y microbiológica del agua. Ha desempeñado un rol clave en la organización de eventos de ciencia ciudadana, promoviendo la participación comunitaria en la conservación del medio ambiente. Desde 2022, es curador en la plataforma iNaturalist, donde gestiona problemas taxonómicos, modera la plataforma y desarrolla proyectos enfocados en biodiversidad y calidad ambiental.</p>
 <p>Desde 2023, ejerce como Asesor Académico en Servicios Integrales de Tesis S.A., brindando acompañamiento y capacitación en el desarrollo de proyectos de investigación a nivel de pregrado y posgrado. Su experiencia también incluye roles previos como Técnico Ambiental y Supervisor de levantamiento de información estadística.</p>
 <p>Marcelo complementa su labor con el registro y conservación de la biodiversidad Andina, combinando metodologías científicas con el uso de software R, Quarto, Markdown y LaTeX para el procesamiento y visualización de datos ambientales. Su enfoque interdisciplinario y su compromiso con la sostenibilidad lo han consolidado como un referente en su campo.</p>
-</section></section><section id="portafolio" class="level1" data-number="2"><h1 data-number="2">
-<span class="header-section-number">2</span> Portafolio</h1>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small"><tbody>
-<tr class="odd">
-<td>2020–Presente</td>
-<td>
-<strong>20K Observaciones de vida silvestre, incluyendo posibles especies no descritas por la ciencia</strong>. Oservador. <a href="https://www.inaturalist.org/observations?place_id=any&amp;user_id=marceloamores&amp;verifiable=any">iNaturalist</a>, <a href="https://www.gbif.org/occurrence/taxonomy?recorded_by_id=https:~2F~2Forcid.org~2F0000-0002-0337-0467&amp;advanced=1">GBIF</a>, <a href="https://bndb.sisbioecuador.bio/bndb/collections/listtabledisplay.php?db=28&amp;collector=Marcelo%20Amores">Symbiota INABIO</a>
-</td>
-</tr>
-<tr class="even">
-<td>2020–Presente</td>
-<td>
-<strong>20K Identificacionesciones de vida silvestre</strong>. Identificador. <a href="https://www.inaturalist.org/identifications/marceloamores">iNaturalist</a>, <a href="https://www.gbif.org/occurrence/taxonomy?identified_by_id=https:~2F~2Forcid.org~2F0000-0002-0337-0467&amp;advanced=1">GBIF</a>
-</td>
-</tr>
-<tr class="odd">
-<td>2021–Presente</td>
-<td>
-<strong>Proyecto: Páramos Ecuador</strong>. Creador, administrador. <a href="https://inaturalist.org/projects/paramos-ecuador">iNaturalist</a>
-</td>
-</tr>
-<tr class="even">
-<td>2021–Presente</td>
-<td>
-<strong>Proyecto: Las peores especies invasoras del mundo</strong>. Creador, administrador. <a href="https://www.inaturalist.org/projects/world-s-worst-invasive-alien-species">iNaturalist</a>
-</td>
-</tr>
-<tr class="odd">
-<td>2021–Presente</td>
-<td>
-<strong>Proyecto: Registro audiovisual de vida silvestre</strong>. Observador, Editor. <a href="https://www.inaturalist.org/projects/130957">iNaturalist</a>, <a href="https://www.youtube.com/channel/UCPFe4QhNT4EkHIF6YnbasGQ">YouTube</a>
-</td>
-</tr>
-<tr class="even">
-<td>2022–Presente</td>
-<td>
-<strong>Gan Bioblitz del Sur, Cotopaxi Ecuador 2022, 2023 &amp; 2024</strong>. Organizador local. <a href="https://www.inaturalist.org/projects/gran-bioblitz-del-sur-2024-cotopaxi-ecuador">iNaturalist</a>
-</td>
-</tr>
-<tr class="odd">
-<td>2023–Presente</td>
-<td>
-<strong>Adaptación web de contenido didactico de ciencias exactas y naturales</strong>. Desarrollador, Editor. <a href="https://github.com/envinatu">ENVINATU</a>, <a href="https://www.youtube.com/channel/UCRfjlNyIvjRziU57AuaDl3A">YouTube</a>
-</td>
-</tr>
-</tbody></table>
-</div>
-</div>
-</section><section id="habilidades" class="level1" data-number="3"><h1 data-number="3">
-<span class="header-section-number">3</span> Habilidades</h1>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Lenguajes</td>
-<td><strong>R, python, JavaScript, html, css</strong></td>
-</tr>
-<tr class="even">
-<td>Composición tipográfica</td>
-<td><strong>LaTeX, markdown, quarto</strong></td>
-</tr>
-<tr class="odd">
-<td>Sistemas de Información Geográfica</td>
-<td><strong>QGIS, ArcGIS, Google Earth Engine</strong></td>
-</tr>
-<tr class="even">
-<td>Producción multimedia</td>
-<td><strong>Premiere, Photoshop, Illustrator, Lightroom, Audition</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section><section id="instrucción-formal" class="level1" data-number="4"><h1 data-number="4">
-<span class="header-section-number">4</span> Instrucción Formal</h1>
+</section></section><section id="instrucción-formal" class="level1" data-number="2"><h1 data-number="2">
+<span class="header-section-number">2</span> Instrucción Formal</h1>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -282,8 +389,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-</section><section id="experiencia-profesional" class="level1" data-number="5"><h1 data-number="5">
-<span class="header-section-number">5</span> Experiencia profesional</h1>
+</section><section id="experiencia-profesional" class="level1" data-number="3"><h1 data-number="3">
+<span class="header-section-number">3</span> Experiencia profesional</h1>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -331,8 +438,106 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-</section><section id="premios-y-reconocimientos" class="level1" data-number="6"><h1 data-number="6">
-<span class="header-section-number">6</span> Premios y Reconocimientos</h1>
+</section><section id="publicaciones" class="level1" data-number="4"><h1 data-number="4">
+<span class="header-section-number">4</span> Publicaciones</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Amores2025Ilinizas" class="csl-entry" role="listitem">
+1. Amores Palma, M. F. (2025). <em>Plantas de los páramos y bosques
+montanos de los picos <span>Ilinizas</span>, <span>Reserva Ecológica Los
+Ilinizas</span></em>. Field Museum of Natural History. <a href="https://science.fieldmuseum.org/es/fieldguides/guias/guia/1794">https://science.fieldmuseum.org/es/fieldguides/guias/guia/1794</a>
+</div>
+<div id="ref-TesisAmores19" class="csl-entry" role="listitem">
+2. Amores Palma, M. F. (2019). <em>Evaluación de la variación de la
+calidad del agua en la <span class="nocase">Cuenca Alta del <span>Río
+Pita</span></span></em> [Undergraduate thesis, Universidad Técnica de
+Cotopaxi]. <a href="https://catalogo.utc.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=16749">https://catalogo.utc.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=16749</a>
+</div>
+</div>
+<div id="refs-86a13309d38a13214cca44fd9cef9b81">
+
+</div>
+</section><section id="portafolio" class="level1" data-number="5"><h1 data-number="5">
+<span class="header-section-number">5</span> Portafolio</h1>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small"><tbody>
+<tr class="odd">
+<td>2020–Presente</td>
+<td>
+<strong>20K Observaciones de vida silvestre, incluyendo posibles especies no descritas por la ciencia</strong>. Oservador. <a href="https://www.inaturalist.org/observations?place_id=any&amp;user_id=marceloamores&amp;verifiable=any">iNaturalist</a>, <a href="https://www.gbif.org/occurrence/taxonomy?recorded_by_id=https:~2F~2Forcid.org~2F0000-0002-0337-0467&amp;advanced=1">GBIF</a>, <a href="https://bndb.sisbioecuador.bio/bndb/collections/listtabledisplay.php?db=28&amp;collector=Marcelo%20Amores">Symbiota INABIO</a>
+</td>
+</tr>
+<tr class="even">
+<td>2020–Presente</td>
+<td>
+<strong>20K Identificacionesciones de vida silvestre</strong>. Identificador. <a href="https://www.inaturalist.org/identifications/marceloamores">iNaturalist</a>, <a href="https://www.gbif.org/occurrence/taxonomy?identified_by_id=https:~2F~2Forcid.org~2F0000-0002-0337-0467&amp;advanced=1">GBIF</a>
+</td>
+</tr>
+<tr class="odd">
+<td>2021–Presente</td>
+<td>
+<strong>Proyecto: Páramos Ecuador</strong>. Creador, administrador. <a href="https://inaturalist.org/projects/paramos-ecuador">iNaturalist</a>
+</td>
+</tr>
+<tr class="even">
+<td>2021–Presente</td>
+<td>
+<strong>Proyecto: Las peores especies invasoras del mundo</strong>. Creador, administrador. <a href="https://www.inaturalist.org/projects/world-s-worst-invasive-alien-species">iNaturalist</a>
+</td>
+</tr>
+<tr class="odd">
+<td>2021–Presente</td>
+<td>
+<strong>Proyecto: Registro audiovisual de vida silvestre</strong>. Observador, Editor. <a href="https://www.inaturalist.org/projects/130957">iNaturalist</a>, <a href="https://www.youtube.com/channel/UCPFe4QhNT4EkHIF6YnbasGQ">YouTube</a>
+</td>
+</tr>
+<tr class="even">
+<td>2022–Presente</td>
+<td>
+<strong>Gan Bioblitz del Sur, Cotopaxi Ecuador 2022, 2023 &amp; 2024</strong>. Organizador local. <a href="https://www.inaturalist.org/projects/gran-bioblitz-del-sur-2024-cotopaxi-ecuador">iNaturalist</a>
+</td>
+</tr>
+<tr class="odd">
+<td>2023–Presente</td>
+<td>
+<strong>Adaptación web de contenido didactico de ciencias exactas y naturales</strong>. Desarrollador, Editor. <a href="https://envinatu.github.io/bio27">ENVINATU</a>, <a href="https://www.youtube.com/channel/UCRfjlNyIvjRziU57AuaDl3A">YouTube</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</section><section id="habilidades" class="level1" data-number="6"><h1 data-number="6">
+<span class="header-section-number">6</span> Habilidades</h1>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Lenguajes</td>
+<td><strong>R, python, JavaScript, html, css</strong></td>
+</tr>
+<tr class="even">
+<td>Composición tipográfica</td>
+<td><strong>LaTeX, markdown, quarto</strong></td>
+</tr>
+<tr class="odd">
+<td>Sistemas de Información Geográfica</td>
+<td><strong>QGIS, ArcGIS, Google Earth Engine</strong></td>
+</tr>
+<tr class="even">
+<td>Producción multimedia</td>
+<td><strong>Premiere, Photoshop, Illustrator, Lightroom, Audition</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="premios-y-reconocimientos" class="level1" data-number="7"><h1 data-number="7">
+<span class="header-section-number">7</span> Premios y Reconocimientos</h1>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -390,8 +595,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-</section><section id="ponencias" class="level1" data-number="7"><h1 data-number="7">
-<span class="header-section-number">7</span> Ponencias</h1>
+</section><section id="ponencias" class="level1" data-number="8"><h1 data-number="8">
+<span class="header-section-number">8</span> Ponencias</h1>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -414,8 +619,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-</section><section id="diplomados" class="level1" data-number="8"><h1 data-number="8">
-<span class="header-section-number">8</span> Diplomados</h1>
+</section><section id="diplomados" class="level1" data-number="9"><h1 data-number="9">
+<span class="header-section-number">9</span> Diplomados</h1>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -457,7 +662,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>2021</td>
 <td>
-<strong>Diplomado en Salud y Seguridad Ocupacional</strong>. Universidad de Las Américas. Distrito Metropolitano de Quito, EC. Aprobación (160 horas). Especialidades: Seguridad en el Trabajo, Higiene Industrial y/o Ergonomía y Psicosociología Aplicada.</td>
+<strong>Diplomado en Salud y Seguridad Ocupacional</strong>. Universidad de Las Américas. Distrito Metropolitano de Quito, EC. Aprobación (160 horas). Especialidades: Seguridad en el Trabajo, Higiene Industrial y/o Ergonomía y Psicosociología Aplicada. Créditos convalidables para la Maestría en Seguridad y Salud Ocupacional.</td>
 </tr>
 <tr class="even">
 <td>2018</td>
@@ -493,8 +698,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-</section><section id="cursos" class="level1" data-number="9"><h1 data-number="9">
-<span class="header-section-number">9</span> Cursos</h1>
+</section><section id="cursos" class="level1" data-number="10"><h1 data-number="10">
+<span class="header-section-number">10</span> Cursos</h1>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -682,389 +887,440 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-</section><section id="respaldos" class="level1" data-number="10"><h1 data-number="10">
-<span class="header-section-number">10</span> Respaldos</h1>
+</section><section id="respaldos" class="level1" data-number="11"><h1 data-number="11">
+<span class="header-section-number">11</span> Respaldos</h1>
 <p>Todos los respaldos que sustentan el presente curriculum, pueden ser visualizados en el este <a href="https://drive.google.com/drive/folders/1_4DcBXYoI4Z_xvvsxlXMPiIJtW8S0bkU?usp=sharing">enlace</a>.</p>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
+</section></main><!-- /main -->
+&nbsp;
+
+<footer style="background-color:	#d0f0ea; padding:1.5em 1em 0.5em; font-family:'Segoe UI', sans-serif; font-size:0.95em; color:#333; margin-bottom: 0;"><div style="max-width:960px; margin:0 auto; text-align:center;">
+    <p><a href="https://github.com/envinatu" target="_blank">Marcelo F. Amores Palma</a> – Ingeniero Ambiental | Magíster en Educación</p>
+    <p>Asesor educativo, científico y ambiental con más de seis años de experiencia desarrollando proyectos de investigación, biodiversidad, ciencia de datos ambientales, educación, ciencia ciudadana y divulgación científica.</p>
+    <p>¿Necesitas asesoría experta en medio ambiente, educación, biodiversidad y herramientas científicas como <em>R, python, Quarto, Markdown, LaTeX</em> o en <em>Sistemas de Información Geográfica como ArcGIS, QGIS o Google Earth Engine</em>?<br><strong>¡Estoy aquí para ayudarte!</strong></p>
+    <p style="margin-top:1em; margin-bottom: 0.5em;">
+      <a href="mailto:contacto.envinatu@gmail.com" style="color:#007bff; text-decoration:none;">📩 Contáctame: contacto.envinatu@gmail.com</a><br><a href="https://www.linkedin.com/in/marceloamores" target="_blank" style="color:#007bff; text-decoration:none; display:inline-flex; align-items:center; gap:0.3em;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#007bff" viewbox="0 0 24 24" style="vertical-align:middle;"><path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.27 2.3-2.6 4.73-2.6C21.3 7.6 24 10.05 24 14.45V24h-5v-8.2c0-1.95-.03-4.45-2.71-4.45-2.71 0-3.13 2.12-3.13 4.3V24h-5V8z"></path></svg>
+        Conecta en LinkedIn
+      </a>
+    </p>
+  </div>
+</footer><!-- Carrusel de iNaturalist debajo del footer --><div class="inat-carousel-container">
+  <div id="inat-carousel-track" class="inat-carousel-track"></div>
+</div>
+
+<style>
+.inat-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  background: #d0f0ea;
+  padding: 10px 0 14px; /* reducido */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.85em;
+  color: #333;
+  margin-top: -8px; /* compensación visual mínima */
+}
+
+.inat-carousel-track {
+  display: flex;
+  gap: 12px;
+  animation: scroll-left 100s linear infinite;
+  width: max-content;
+  padding: 0 1em;
+}
+
+.inat-card {
+  flex: 0 0 auto;
+  width: 90px;
+  text-align: center;
+  background: #fff;
+  padding: 8px 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.inat-card img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.inat-card .species {
+  font-weight: 600;
+  font-size: 0.75em;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inat-card .date {
+  font-size: 0.7em;
+  color: #666;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+<script>
+fetch("https://api.inaturalist.org/v1/observations?user_id=marceloamores&order=desc&order_by=observed_on&per_page=8")
+  .then(response => response.json())
+  .then(data => {
+    const track = document.getElementById("inat-carousel-track");
+    const items = data.results.map(obs => {
+      const img = obs.photos.length ? obs.photos[0].url.replace("square", "small") : "https://static.inaturalist.org/images/users/defaults/thumb.png";
+      const species = obs.taxon ? (obs.taxon.preferred_common_name || obs.taxon.name) : "Sin ID";
+      const date = new Date(obs.observed_on).toLocaleDateString("es-EC");
+      return `
+        <div class="inat-card">
+          <a href="https://www.inaturalist.org/observations/${obs.id}" target="_blank" rel="noopener noreferrer">
+            <img src="${img}" alt="${species}" />
+          </a>
+          <div class="species" title="${species}">${species}</div>
+          <div class="date">${date}</div>
+        </div>`;
+    }).join("");
+    track.innerHTML = items + items;
+  })
+  .catch(err => {
+    console.error("Error:", err);
+  });
+</script><!-- 
+<hr />
+<p style="text-align: center;">Developed and maintained by <a href="https://github.com/envinatu" target="_blank">Marcelo F. Amores Palma</a>. <br>
+
+
+Keen to support the site? You're most welcome to <a href='https://ko-fi.com/I2I1K189U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> </p>
+
+
+
+<p style="text-align: center;">For updates, sign up to my <a href="https://github.com/envinatu" target="_blank">newsletter</a></p>
+
+
+<hr>
+--><!-- Add icon library 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons 
+<!--<p style="text-align: center;">
+<!--    <a href="https://www.linkedin.com/in/marceloamores" class="fa fa-linkedin" target="_blank"></a>
+ <!--   <a href="https://www.inaturalist.org/people/marceloamores" target="_blank">
+  <img src="https://static.inaturalist.org/wiki_page_attachments/3154-medium.png" alt="iNaturalist" style="width:24px; height:24px;">
+    <a href="https://github.com/envinatu" class="fa fa-github" target="_blank"></a>
+    <a href="https://x.com/envinatu" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/X_logo_2023_original.svg/300px-X_logo_2023_original.svg.png" alt="X" style="width:13px; height:13px;">
+    <a href="https://www.youtube.com/channel/envinatu" class="fa fa-youtube" target="_blank"></a>
+</a>
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css" media="screen">
+.inat-widget {padding: 10px; line-height: 1;}
+.inat-widget-header {margin-bottom: 10px;}
+.inat-widget td {vertical-align: top; padding-bottom: 10px;}
+.inat-label { color: #888; }
+.inat-meta { font-size: smaller; margin-top: 3px; line-height: 1.2;}
+.inat-observation-body, .inat-user-body { padding-left: 10px; }
+.inat-observation-image {text-align: center;}
+.inat-observation-image, .inat-user-image { width: 48px; display: inline-block; }
+.inat-observation-image img, .inat-user-image img { max-width: 48px; }
+.inat-observation-image img { vertical-align: middle; }
+.inat-widget-small .inat-observation-image { display:block; float: left; margin: 0 3px 3px 0; height:48px;}
+.inat-label, .inat-value, .inat-user { font-family: "Trebuchet MS", Arial, sans-serif; }
+.inat-user-body {vertical-align: middle;}
+.inat-widget td.inat-user-body {vertical-align: middle;}
+.inat-widget .inat-footer td.inat-value {vertical-align: middle; padding-left: 10px;}
+</style>
+<div class="inat-widget">
+  
+<table class="inat-footer caption-top" data-quarto-postprocess="true">
+<tbody>
+<tr class="inat-user odd">
+<td class="inat-user-image"><a href="https://www.inaturalist.org/observations/marceloamores" data-border="0"><img src="https://static.inaturalist.org/attachments/users/icons/1116633/thumb.jpg?1628812209" class="usericon img-fluid" /></a></td>
+<td class="inat-value"><strong><a href="https://www.inaturalist.org/observations/marceloamores">Ver las observaciones de Marcelo en iNaturalist »</a></strong></td>
+</tr>
+</tbody>
+</table>
+
+  <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/marceloamores.widget?layout=large&limit=5&order=desc&order_by=creatrd_at&locale=es"></script>
+</div>
+
+-->
+    
+
+
+&nbsp;
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
       }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
       return false;
     }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiado");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiado");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/envinatu\.github\.io\/amores\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/envinatu\.github\.io\/amores\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1072,185 +1328,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
